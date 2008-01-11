@@ -1,5 +1,6 @@
 %define		_plugin		userpage
-Summary:	Dokuwiki UserPage Plugin
+Summary:	DokuWiki UserPage plugin
+Summary(pl.UTF-8):	Wtyczka UserPage (strony użytkowników) dla DokuWiki
 Name:		dokuwiki-plugin-%{_plugin}
 Version:	20070618
 Release:	0.1
@@ -16,8 +17,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_plugindir	%{_dokudir}/lib/plugins/%{_plugin}
 
 %description
-When a user registers with the wiki, this plugin will add their name to a given
-page.
+When a user registers with the wiki, this plugin will add their name
+to a given page.
+
+%description -l pl.UTF-8
+Ta wtyczka dodaje do określonej strony w wiki nazwę użytkownika w
+chwili jego rejestracji.
 
 %prep
 %setup -q -n %{_plugin}
