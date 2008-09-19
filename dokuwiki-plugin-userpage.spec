@@ -2,7 +2,7 @@
 Summary:	DokuWiki UserPage plugin
 Summary(pl.UTF-8):	Wtyczka UserPage (strony użytkowników) dla DokuWiki
 Name:		dokuwiki-plugin-%{plugin}
-Version:	20070618
+Version:	20070715
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
