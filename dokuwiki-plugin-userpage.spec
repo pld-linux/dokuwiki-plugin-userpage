@@ -13,6 +13,7 @@ Requires:	dokuwiki >= 20061106
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		dokuconf	/etc/webapps/dokuwiki
 %define		dokudir		/usr/share/dokuwiki
 %define		plugindir	%{dokudir}/lib/plugins/%{plugin}
 
@@ -35,6 +36,12 @@ rm $RPM_BUILD_ROOT%{plugindir}/{License.txt,ReadMe.txt}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+# force css cache refresh
+if [ -f %{dokuconf}/local.php ]; then
+	touch %{dokuconf}/local.php
+fi
 
 %files
 %defattr(644,root,root,755)
