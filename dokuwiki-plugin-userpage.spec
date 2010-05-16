@@ -9,6 +9,7 @@ Group:		Applications/WWW
 Source0:	http://whoopdedo.org/doku-plugins/userpage.zip
 # Source0-md5:	46db95c01ab4d8ad23f9648eadd15f65
 URL:		http://whoopdedo.org/doku/wiki
+BuildRequires:	unzip
 Requires:	dokuwiki >= 20061106
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
